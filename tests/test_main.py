@@ -16,9 +16,23 @@ def test_add_three_numbers():
     assert result == 9    
 
 def test_add_many_numbers():
-    numbers = range(100)
+    numbers = range(1,100)
     calculator = Calc() # Instantation
     
     result = calculator.add(*numbers)
     
     assert result == 4950  
+    
+def test_subtract_two_numbers():
+    calculator = Calc() # Instantation
+    
+    result = calculator.sub(5, 4)
+    
+    assert result == 1
+    
+def test_subtract_two_numbers_2():
+    calculator = Calc() # Instantation
+    
+    result = calculator.sub(10, 4)
+    
+    assert result == 6
