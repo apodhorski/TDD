@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from calculator.main import Calc
+import pytest
 
 def test_add_two_numbers():
     calculator = Calc() # Instantation
@@ -37,8 +38,15 @@ def test_subtract_two_numbers_2():
     
     assert result == 6
     
+def test_divide_two_numbers_2():
+    calculator = Calc() # Instantation
+    
+    result = calculator.div(10, 4)
+    
+    assert result == 2.5
+    
 def test_divide_by_zero():
-    calculator = Calc()
-   
+    calculator = Calc() # Instantation
+    
     with pytest.raises(ValueError):
         calculator.div(10,0)
