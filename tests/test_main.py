@@ -36,3 +36,9 @@ def test_subtract_two_numbers_2():
     result = calculator.sub(10, 4)
     
     assert result == 6
+    
+def test_divide_by_zero():
+    calculator = Calc()
+   
+    with pytest.raises(ValueError):
+        calculator.div(10,0)
